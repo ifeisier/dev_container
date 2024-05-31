@@ -36,8 +36,9 @@ service ssh start
 
 
 
-# 自己的脚本
-
+# 可能会用到的库
+apt-get install -y g++ gcc libudev-dev pkg-config build-essential
+apt-get install -y bzip2 unzip wget curl git
 
 
 # 保持容器运行
