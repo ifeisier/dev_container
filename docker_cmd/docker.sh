@@ -10,10 +10,10 @@ workspace_dir="$(cd "$script_dir/../workspace" && pwd)"
 ##  配置容器信息
 
 # 开发容器的名字
-container_name="asd"
+container_name="test"
 
 # 开发容器的镜像
-image_name="python:3.8"
+image_name="ubuntu:24.04"
 
 # 开发容器的远程端口
 remote_port="2222"
@@ -30,8 +30,9 @@ done
 
 
 
-##  启动容器  
+##  启动容器
 sudo docker run -itd --restart="always" \
+--privileged \
 --cpus="4" \
 --name $container_name \
 -p $remote_port:22 \
