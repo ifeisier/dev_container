@@ -1,27 +1,18 @@
 # dev_container
 
-连接服务器上的容器, 并在容器中进行开发.
+创建 docker 容器并在容器中安装 ssh 服务.
+
+ide 可以通过 ssh 连接到容器进行远程开发.
 
 这个脚本适合简单的开发场景.
 
 
 ## 使用
 
-可以通过 `docker.sh` 脚本创建不同的容器.
+可以将项目放到 workspace 目录, 并在 dev_container 目录中执行 `./init_scripts/run.sh` 脚本.
 
-`init.sh` 脚本是在容器内部执行的, 主要用来安装 ssh.
+init_scripts 目录中还有两个脚本:
 
-```shell
-# 开发容器的名字
-container_name="dev_container"
+- init_container.sh: 只有第一次运行容器的时候才执行.
 
-# 开发容器的镜像
-image_name="python:3.8"
-
-# 开发容器的远程端口
-# 这个是 ssh 的远程端口
-remote_port="2222"
-
-# 开发容器的端口映射
-#mapping_port='["8080:80","9090:90"]'
-```
+- container_startup.sh: 每次容器启动都会执行.
