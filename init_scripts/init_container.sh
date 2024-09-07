@@ -11,7 +11,7 @@ echo "" > $LOCK_FILE
 export DEBIAN_FRONTEND=noninteractive
 apt-get update
 apt-get install -y locales ntpdate
-apt-get install -y g++ gcc libudev-dev pkg-config build-essential
+apt-get install -y g++ gcc libudev-dev pkg-config build-essential libssl-dev
 apt-get install -y bzip2 unzip wget curl git
 
 apt-get install -y openssh-server
