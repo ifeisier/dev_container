@@ -19,8 +19,8 @@ image_name="ubuntu:24.04"
 remote_port="2222"
 
 # 开发容器的端口映射
-#mapping_port='["8080:80","9090:90"]'
 mapping_port=''
+#mapping_port='["8080:80","9090:90"]'
 mapping_port=$(echo $mapping_port | tr -d '[]"')
 mapping_port=$(echo $mapping_port | tr ',' ' ')
 mapping_port_output=""
