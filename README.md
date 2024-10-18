@@ -9,9 +9,9 @@ ide 可以通过 ssh 连接到容器进行远程开发.
 
 ## 使用
 
-可以将项目放到 workspace 目录, 并在 dev_container 目录中执行 `./init_scripts/run.sh` 脚本.
+可以将项目放到 workspace 目录, 并在 dev_container 目录中执行 `./scripts/init_dev_container/run.sh` 脚本.
 
-init_scripts 目录中还有两个脚本:
+init_dev_container 目录中还有两个脚本:
 
 - init_container.sh: 只有第一次运行容器的时候才执行.
 
