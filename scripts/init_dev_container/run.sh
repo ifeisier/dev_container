@@ -12,7 +12,7 @@ echo "脚本目录路径: $script_dir"
 echo "工作目录路径: $workspace_dir"
 echo "================================="
 
-container_name="test"
+container_name="dev_container"
 remote_port="2221"
 
 mapping_port=''
@@ -27,7 +27,7 @@ done
 sudo docker run -itd --restart="always" \
 --privileged \
 --cpus="2" \
--m 512m --memory-swap 1g \
+-m 2g --memory-swap 2g \
 --name $container_name \
 --entrypoint /bin/bash \
 -p $remote_port:22 \
